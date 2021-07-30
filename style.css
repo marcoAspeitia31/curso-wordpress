@@ -388,14 +388,15 @@ a:focus {
     background-size: cover;
 }
 
-.page-header h2 {
+.page-header h1 {
     position: relative;
     color: #fbaf32;
     font-size: 60px;
     font-weight: 700;
 }
 
-.page-header a {
+.page-header a,
+.page-header span {
     position: relative;
     padding: 0 12px;
     font-size: 20px;
@@ -1563,6 +1564,12 @@ div.single {
 .single .comment-form input,
 .single .comment-form textarea {
     border-radius: 5px;
+}
+
+.post-navigation .nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
 

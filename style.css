@@ -1665,30 +1665,26 @@ div.single {
     padding: 0;
 }
 
-.sidebar .sidebar-widget .category-widget {
-    position: relative;
-}
-
-.sidebar .category-widget ul {
+.sidebar .sidebar-widget ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.sidebar .category-widget ul li {
+.sidebar .sidebar-widget ul li {
     margin: 0 0 12px 22px; 
 }
 
-.sidebar .category-widget ul li:last-child {
+.sidebar .sidebar-widget ul li:last-child {
     margin-bottom: 0; 
 }
 
-.sidebar .category-widget ul li a {
+.sidebar .sidebar-widget ul li a {
     display: inline-block;
     line-height: 23px;
 }
 
-.sidebar .category-widget ul li::before {
+.sidebar .sidebar-widget ul li::before {
     position: absolute;
     content: '\f105';
     font-family: 'Font Awesome 5 Free';
@@ -1697,28 +1693,28 @@ div.single {
     left: 1px;
 }
 
-.sidebar .category-widget ul li span {
+.sidebar .sidebar-widget ul li span {
     display: inline-block;
     float: right;
 }
 
-.sidebar .sidebar-widget .tag-widget {
+.sidebar .sidebar-widget .tagcloud {
     position: relative;
     margin: -5px -5px;
 }
 
-.single .tag-widget a {
+.single .tagcloud a {
     margin: 5px;
     display: inline-block;
     padding: 7px 15px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 14px !important;
+    font-weight: 900;
     color: #fbaf32;
     border: 1px solid #dddddd;
     border-radius: 5px;
 }
 
-.single .tag-widget a:hover {
+.single .tagcloud a:hover {
     color: #ffffff;
     background: #fbaf32;
     border-color: #fbaf32;
@@ -1733,6 +1729,17 @@ div.single {
     transform: scale(1.1);
 }
 
+.sidebar-widget .searchform{
+    position: relative;
+}
+
+.sidebar-widget .searchform input#searchsubmit {
+    background-color: #fbaf32;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 /*******************************/
 /********* Contact CSS *********/

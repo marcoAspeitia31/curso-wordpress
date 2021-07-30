@@ -1295,6 +1295,29 @@ div.blog {
     background: #fbaf32;
 }
 
+.page-numbers {
+    padding: .5rem .75rem;
+    border: 1px solid #dee2e6;
+    border-left: none;
+}
+.page-numbers:hover{
+    color: #ffffff;
+    background: #fbaf32;
+}
+.page-numbers:first-child{
+    border-left: 1px solid #dee2e6;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+.page-numbers:last-child{
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+.page-link:hover, .page-link a:hover, .pagination .current{
+    color: #ffffff;
+    background: #fbaf32;
+}
+
 .blog .pagination .disabled .page-link {
     color: #999999;
 }

@@ -12,6 +12,8 @@ if ( ! function_exists('curso_wordpress_setup') ) {
  * @since Curso Wordpress 1.0.0
  */
 function curso_wordpress_setup()  {
+    /* Defining images size */
+    add_image_size( 'grid-blog', 500, 350, true );
 
 	// Add theme support for Automatic Feed Links
 	add_theme_support( 'automatic-feed-links' );

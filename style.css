@@ -1583,6 +1583,7 @@ div.single {
 .sidebar .sidebar-widget {
     position: relative;
     margin-bottom: 45px;
+    overflow: hidden;
 }
 
 .sidebar .sidebar-widget .widget-title {
@@ -1723,18 +1724,12 @@ div.single {
     border-color: #fbaf32;
 }
 
-.sidebar .image-widget {
-    display: block;
+.sidebar-widget img {
     width: 100%;
-    overflow: hidden;
-}
-
-.sidebar .image-widget img {
-    max-width: 100%;
     transition: .3s;
 }
 
-.sidebar .image-widget img:hover {
+.sidebar-widget img:hover {
     transform: scale(1.1);
 }
 

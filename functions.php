@@ -88,7 +88,7 @@ if ( ! function_exists( 'curso_wordpress_sidebars' ) ) {
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',
             'before_widget' => '<div class="sidebar-widget">',
-            'after_widget'  => '<div>',
+            'after_widget'  => '</div>',
         );
         register_sidebar( $args );
     

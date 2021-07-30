@@ -1310,7 +1310,7 @@ div.blog {
 /*******************************/
 /******* Single Post CSS *******/
 /*******************************/
-.single {
+div.single {
     position: relative;
     padding: 45px 0;
 }

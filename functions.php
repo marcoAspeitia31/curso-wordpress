@@ -76,9 +76,25 @@ function curso_wordpress_register_scripts(){
 }
 add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_scripts' );
 
-/**
- * Fires when scripts and styles are enqueued.
- *
- */
-function action_wp_enqueue_scripts() : void {
+if ( ! function_exists( 'curso_wordpress_sidebars' ) ) {
+
+    // Register Sidebars
+    function curso_wordpress_sidebars() {
+    
+        $args = array(
+            'id'            => 'single-sidebar',
+            'class'         => 'clase-bonita',
+            'name'          => __( 'Sidebar Lateral Posts', 'curso-wordpress' ),
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+            'before_widget' => '<div class="sidebar-widget">',
+            'after_widget'  => '<div>',
+        );
+        register_sidebar( $args );
+    
+    }
+    add_action( 'widgets_init', 'curso_wordpress_sidebars' );
+    
 }
+// Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
+add_filter( 'use_widgets_block_editor', '__return_false' );

@@ -1,4 +1,4 @@
-$(function () {
+(function ($) {
 
     $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
@@ -58,7 +58,7 @@ $(function () {
         e.preventDefault();
         $(this).tab("show");
     });
-});
+})(jQuery);
 
 $('#name').focus(function () {
     $('#success').html('');

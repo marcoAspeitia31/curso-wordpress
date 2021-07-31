@@ -15,7 +15,7 @@ get_template_part( 'template-parts/header/header', 'search' );
     <!-- Encabezado -->
     <div class="section-header text-center">
         <h2>
-            <?php echo sprintf( __( '%s Resultados para: ', 'escuela-cocina' ), $wp_query->found_posts ); echo get_search_query(); ?>
+            <?php echo sprintf( __( '%s Resultados para: ', 'curso-wordpress' ), $wp_query->found_posts ); echo get_search_query(); ?>
         </h2>
     </div>
     <!-- Encabezado end -->

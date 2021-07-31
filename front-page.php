@@ -5,7 +5,7 @@
                 <div class="owl-carousel">
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/carousel-1.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/carousel-1.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Best <span>Quality</span> Ingredients</h1>
@@ -20,7 +20,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/carousel-2.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/carousel-2.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>World’s <span>Best</span> Chef</h1>
@@ -35,7 +35,7 @@
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/carousel-3.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/carousel-3.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Fastest Order <span>Delivery</span></h1>
@@ -155,7 +155,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/about.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/about.jpg" alt="Image">
                             <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                                 <span></span>
                             </button>
@@ -216,16 +216,16 @@
                             <div class="feature-img">
                                 <div class="row">
                                     <div class="col-6">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/feature-1.jpg" alt="Image">
+                                        <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/feature-1.jpg" alt="Image">
                                     </div>
                                     <div class="col-6">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/feature-2.jpg" alt="Image">
+                                        <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/feature-2.jpg" alt="Image">
                                     </div>
                                     <div class="col-6">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/feature-3.jpg" alt="Image">
+                                        <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/feature-3.jpg" alt="Image">
                                     </div>
                                     <div class="col-6">
-                                        <img src="<?php echo get_template_directory_uri();?>/assets/images/feature-4.jpg" alt="Image">
+                                        <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/feature-4.jpg" alt="Image">
                                     </div>
                                 </div>
                             </div>
@@ -368,7 +368,7 @@
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-burger.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Mini cheese Burger</span> <strong>$9.00</strong></h3>
@@ -377,7 +377,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-burger.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Double size burger</span> <strong>$11.00</strong></h3>
@@ -386,7 +386,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-burger.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Bacon, EGG and Cheese</span> <strong>$13.00</strong></h3>
@@ -395,7 +395,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-burger.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Pulled porx Burger</span> <strong>$18.00</strong></h3>
@@ -404,7 +404,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-burger.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Fried chicken Burger</span> <strong>$22.00</strong></h3>
@@ -413,7 +413,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-burger-img.jpg" alt="Image">
+                                    <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-burger-img.jpg" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -422,7 +422,7 @@
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-snack.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Corn Tikki - Spicy fried Aloo</span> <strong>$15.00</strong></h3>
@@ -431,7 +431,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-snack.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Bread besan Toast</span> <strong>$35.00</strong></h3>
@@ -440,7 +440,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-snack.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Healthy soya nugget snacks</span> <strong>$20.00</strong></h3>
@@ -449,7 +449,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-snack.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Tandoori Soya Chunks</span> <strong>$30.00</strong></h3>
@@ -458,7 +458,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-snack-img.jpg" alt="Image">
+                                    <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-snack-img.jpg" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -467,7 +467,7 @@
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-beverage.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Single Cup Brew</span> <strong>$7.00</strong></h3>
@@ -476,7 +476,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-beverage.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Caffe Americano</span> <strong>$9.00</strong></h3>
@@ -485,7 +485,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-beverage.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Caramel Macchiato</span> <strong>$15.00</strong></h3>
@@ -494,7 +494,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-beverage.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Standard black coffee</span> <strong>$8.00</strong></h3>
@@ -503,7 +503,7 @@
                                     </div>
                                     <div class="menu-item">
                                         <div class="menu-img">
-                                            <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-beverage.jpg" alt="Image">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Standard black coffee</span> <strong>$12.00</strong></h3>
@@ -512,7 +512,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 d-none d-lg-block">
-                                    <img src="<?php echo get_template_directory_uri();?>/assets/images/menu-beverage-img.jpg" alt="Image">
+                                    <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/menu-beverage-img.jpg" alt="Image">
                                 </div>
                             </div>
                         </div>
@@ -534,7 +534,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/team-1.jpg" alt="Image">
+                                <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/team-1.jpg" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -551,7 +551,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/team-2.jpg" alt="Image">
+                                <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/team-2.jpg" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -568,7 +568,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/team-3.jpg" alt="Image">
+                                <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/team-3.jpg" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -585,7 +585,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/team-4.jpg" alt="Image">
+                                <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/team-4.jpg" alt="Image">
                                 <div class="team-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -611,7 +611,7 @@
                 <div class="owl-carousel testimonials-carousel">
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/testimonial-1.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/testimonial-1.jpg" alt="Image">
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
@@ -621,7 +621,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/testimonial-2.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/testimonial-2.jpg" alt="Image">
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
@@ -631,7 +631,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/testimonial-3.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/testimonial-3.jpg" alt="Image">
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
@@ -641,7 +641,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/testimonial-4.jpg" alt="Image">
+                            <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/testimonial-4.jpg" alt="Image">
                         </div>
                         <p>
                             Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput
@@ -759,7 +759,7 @@
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/blog-1.jpg" alt="Blog">
+                                <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/blog-1.jpg" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>
@@ -781,7 +781,7 @@
                     <div class="col-md-6">
                         <div class="blog-item">
                             <div class="blog-img">
-                                <img src="<?php echo get_template_directory_uri();?>/assets/images/blog-2.jpg" alt="Blog">
+                                <img src="<?php echo esc_url( get_template_directory_uri() );?>/assets/images/blog-2.jpg" alt="Blog">
                             </div>
                             <div class="blog-content">
                                 <h2 class="blog-title">Lorem ipsum dolor sit amet</h2>

@@ -77,7 +77,7 @@ the_post_navigation(
     <div class="owl-carousel related-slider owl-loaded owl-drag">
         <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-760px, 0px, 0px); transition: all 0.25s ease 0s; width: 3040px;"><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-3.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-3.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -88,7 +88,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-4.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-4.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -99,7 +99,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item active" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-1.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-1.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -110,7 +110,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item active" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-2.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-2.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -121,7 +121,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-3.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-3.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -132,7 +132,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-4.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-4.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -143,7 +143,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-1.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-1.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -154,7 +154,7 @@ the_post_navigation(
             </div>
         </div></div><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
             <div class="post-img">
-                <img src="<?php echo get_template_directory_uri();?>/assets/images/post-2.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-2.jpg">
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>

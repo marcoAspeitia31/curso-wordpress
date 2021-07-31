@@ -12,7 +12,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-uppercase d-lg-none">Búsqueda</h1>
+                <?php if( is_404(  ) ): ?>
+                    <h1 class="text-uppercase d-lg-none">Error</h1>
+                <?php else: ?>
+                    <h1 class="text-uppercase d-lg-none">Búsqueda</h1>
+                <?php endif; ?>
+
             </div>
         </div>
     </div>

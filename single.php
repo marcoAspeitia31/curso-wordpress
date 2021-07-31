@@ -5,6 +5,8 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package curso-wordpress
+ * 
+ * @since Curso Wordpress 1.0.0
  */
 
 get_header();

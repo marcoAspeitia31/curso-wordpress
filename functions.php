@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @since Curso Wordpress 1.0.0
+ */
 // Set content width value based on the theme's design
 if ( ! isset( $content_width ) )
 	$content_width = 1400;

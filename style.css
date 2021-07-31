@@ -101,6 +101,17 @@ a:focus {
     font-size: inherit;
     margin-left: 0;
 }
+#searchform{
+    position: relative;
+}
+
+input#searchsubmit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background-color: #fbaf32;
+}
 /**********************************/
 /********** Wordpress CSS *********/
 /**********************************/

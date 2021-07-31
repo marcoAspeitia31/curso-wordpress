@@ -144,13 +144,15 @@ the_post_navigation(
             </div>
         </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div><div class="owl-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div></div><div class="owl-dots disabled"></div></div>
 </div>
-<?php
-    if(comments_open() || get_comments_number()):
-        comments_template();
-    else:
-        echo "<p class='text-center'>Comentarios deshabilitados</p>";
-    endif;
-?>
+<div class="single-comment">
+    <?php
+        if(comments_open() || get_comments_number()):
+            comments_template();
+        else:
+            echo "<p class='text-center'>Comentarios deshabilitados</p>";
+        endif;
+    ?>
+</div>
 <div class="comment-form">
     <?php     
     $comment_cookies_1 = ' By commenting you accept the';
@@ -160,21 +162,8 @@ the_post_navigation(
     
     //Array
     $comments_args = array(
-        //Define Fields
-        'fields' => array(
-            //Author field
-            'author' => '<label for="name">Name *</label><input type="text" class="form-control" id="name" required>',
-            //Email Field
-            'email' => '<label for="email">Email *</label><input type="email" class="form-control" id="email" required>',
-            //URL Field
-            'url' => '<label for="website">Website</label><input type="url" class="form-control" id="website">',
-            //Cookies
-            'cookies' => '<input type="checkbox" required>' . $comment_cookies_1 . '<a href="' . get_privacy_policy_url() . '">' . $comment_cookies_2 . '</a>',
-        ),
         //Cancel Reply Text
         'cancel_reply_link' => __( $comment_cancel ),
-        // Redefine your own textarea (the comment body).
-        'comment_field' => '<label for="message">Message *</label><textarea id="message" cols="30" rows="5" class="form-control"></textarea>',
         // Remove "Text or HTML to be displayed after the set of comment fields".
         'comment_notes_after' => '',
         //Submit Button Classes

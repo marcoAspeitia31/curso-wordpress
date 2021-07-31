@@ -1517,13 +1517,16 @@ div.single {
     padding: 0;
 }
 
-.single .comment-child {
+.single .comment-list .parent .children {
     list-style: none;
 }
 
 .single .comment-body {
-    display: flex;
     margin-bottom: 30px;
+}
+
+.single .comment-metadata a time{
+    color: gray;
 }
 
 .single .comment-img {
@@ -1535,33 +1538,29 @@ div.single {
     border-radius: 100px;
 }
 
-.single .comment-text {
-    padding-left: 15px;
-    width: calc(100% - 60px);
-}
-
-.single .comment-text h3 {
+.single .comment-author.vcard .fn {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 3px;
+    color: #fbaf32;
 }
 
-.single .comment-text span {
+.single .comment-content span {
     display: block;
     font-size: 14px;
     font-weight: 300;
     margin-bottom: 5px;
 }
 
-.single .comment-text .btn {
-    padding: 3px 10px;
-    font-size: 14px;
-    color: #454545;
-    background: #dddddd;
+.single .comment-body .reply a {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    color: #ffffff;
+    background: #719a0a;
     border-radius: 5px;
 }
 
-.single .comment-text .btn:hover {
+.single .comment-body .reply a:hover {
     background: #fbaf32;
 }
 
@@ -1593,6 +1592,25 @@ div.single {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
+}
+
+.comment-form p input,
+.comment-form p textarea
+{
+    width: 100%;
+    border: 1px solid #ced4da;
+    padding: .5rem .2rem;
+}
+
+#cancel-comment-reply-link{
+        background-color: red;
+        padding: 0.2rem 1rem;
+        color: white;
+        border-radius: 5px;
+}
+
+.comment-author.vcard .says{
+    display: none;
 }
 
 

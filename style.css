@@ -1569,18 +1569,18 @@ div.single {
     position: relative;
 }
 
-.single .comment-form h2 {
+.single .comment-form h3 {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 25px;
 }
 
-.single .comment-form form {
+.single .comment-form .comment-respond form {
     padding: 30px;
     background: #f3f6ff;
 }
 
-.single .comment-form form .form-group:last-child {
+.single .comment-form .comment-respond form .form-group:last-child {
     margin: 0;
 }
 

@@ -144,81 +144,43 @@ the_post_navigation(
             </div>
         </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div><div class="owl-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div></div><div class="owl-dots disabled"></div></div>
 </div>
-<div class="single-comment">
-    <h2>3 Comments</h2>
-    <ul class="comment-list">
-        <li class="comment-item">
-            <div class="comment-body">
-                <div class="comment-img">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/user.jpg">
-                </div>
-                <div class="comment-text">
-                    <h3><a href="">Josh Dunn</a></h3>
-                    <span>01 Jan 2045 at 12:00pm</span>
-                    <p>
-                        Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                    </p>
-                    <a class="btn" href="">Reply</a>
-                </div>
-            </div>
-        </li>
-        <li class="comment-item">
-            <div class="comment-body">
-                <div class="comment-img">
-                    <img src="<?php echo get_template_directory_uri();?>/assets/images/user.jpg">
-                </div>
-                <div class="comment-text">
-                    <h3><a href="">Josh Dunn</a></h3>
-                    <p><span>01 Jan 2045 at 12:00pm</span></p>
-                    <p>
-                        Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                    </p>
-                    <a class="btn" href="">Reply</a>
-                </div>
-            </div>
-            <ul class="comment-child">
-                <li class="comment-item">
-                    <div class="comment-body">
-                        <div class="comment-img">
-                            <img src="<?php echo get_template_directory_uri();?>/assets/images/user.jpg">
-                        </div>
-                        <div class="comment-text">
-                            <h3><a href="">Josh Dunn</a></h3>
-                            <p><span>01 Jan 2045 at 12:00pm</span></p>
-                            <p>
-                                Lorem ipsum dolor sit amet elit. Integer lorem augue purus mollis sapien, non eros leo in nunc. Donec a nulla vel turpis tempor ac vel justo. In hac platea dictumst. 
-                            </p>
-                            <a class="btn" href="">Reply</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </li>
-    </ul>
-</div>
+<?php
+    if(comments_open() || get_comments_number()):
+        comments_template();
+    else:
+        echo "<p class='text-center'>Comentarios deshabilitados</p>";
+    endif;
+?>
 <div class="comment-form">
-    <h2>Leave a comment</h2>
-    <form>
-        <div class="form-group">
-            <label for="name">Name *</label>
-            <input type="text" class="form-control" id="name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" class="form-control" id="email">
-        </div>
-        <div class="form-group">
-            <label for="website">Website</label>
-            <input type="url" class="form-control" id="website">
-        </div>
-
-        <div class="form-group">
-            <label for="message">Message *</label>
-            <textarea id="message" cols="30" rows="5" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <input type="submit" value="Post Comment" class="btn custom-btn">
-        </div>
-    </form>
+    <?php     
+    $comment_cookies_1 = ' By commenting you accept the';
+    $comment_cookies_2 = ' Privacy Policy';
+    
+    $comment_cancel = 'Cancel Reply';
+    
+    //Array
+    $comments_args = array(
+        //Define Fields
+        'fields' => array(
+            //Author field
+            'author' => '<label for="name">Name *</label><input type="text" class="form-control" id="name" required>',
+            //Email Field
+            'email' => '<label for="email">Email *</label><input type="email" class="form-control" id="email" required>',
+            //URL Field
+            'url' => '<label for="website">Website</label><input type="url" class="form-control" id="website">',
+            //Cookies
+            'cookies' => '<input type="checkbox" required>' . $comment_cookies_1 . '<a href="' . get_privacy_policy_url() . '">' . $comment_cookies_2 . '</a>',
+        ),
+        //Cancel Reply Text
+        'cancel_reply_link' => __( $comment_cancel ),
+        // Redefine your own textarea (the comment body).
+        'comment_field' => '<label for="message">Message *</label><textarea id="message" cols="30" rows="5" class="form-control"></textarea>',
+        // Remove "Text or HTML to be displayed after the set of comment fields".
+        'comment_notes_after' => '',
+        //Submit Button Classes
+        'class_submit' => 'mt-3 btn custom-btn',
+    );
+    comment_form( $comments_args );
+    ?>
 </div>
             

@@ -8,7 +8,19 @@
  */
  ?>
 <div class="single-content">
-    <?php the_content(); ?>
+    <?php
+        the_content();
+        $args = array (
+            'before'            => '<div class="d-flex justify-content-between">',
+            'after'             => '</div>',
+            'link_before'       => '<span class="page-link">',
+            'link_after'        => '</span>',
+            'next_or_number'    => 'next',
+            'nextpagelink'      => __( 'Continuar leyendo &raquo', 'curso-wordpress' ),
+            'previouspagelink'  => __( '&laquo Regresar ', 'curso-wordpress' ),
+        );
+        wp_link_pages( $args );
+    ?>
 </div>
 <div class="single-tags">
     <?php the_tags(); ?>
@@ -23,7 +35,15 @@ the_post_navigation(
 ?>
 <div class="single-bio">
     <div class="single-bio-img">
-        <img src="<?php echo get_template_directory_uri();?>/assets/images/user.jpg">
+        <?php
+            echo get_avatar( 
+                get_the_author_meta( 'user_email' ), 
+                75,
+                'gravatar_default',
+                get_the_author_meta( 'user_nicename' ), 
+                ["class" => "img-fluid"]
+            );
+        ?>
     </div>
     <div class="single-bio-text">
         <?php $author_id = get_the_author_meta( 'ID' ); ?>

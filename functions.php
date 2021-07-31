@@ -152,3 +152,16 @@ if ( ! function_exists( 'curso_wordpress_sidebars' ) ) {
 }
 // Disables the block editor from managing widgets. renamed from wp_use_widgets_block_editor
 add_filter( 'use_widgets_block_editor', '__return_false' );
+
+/**
+ * Filter the except length to 20 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ * 
+ * @link https://developer.wordpress.org/reference/hooks/excerpt_length/
+ */
+function curso_wordpress_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'curso_wordpress_custom_excerpt_length', 999 );

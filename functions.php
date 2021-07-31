@@ -24,6 +24,9 @@ function curso_wordpress_setup()  {
 	// Add theme support for document Title tag
 	add_theme_support( 'title-tag' );
 
+    //Bootstrap menu support
+    require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
     /*
     * Switch default core markup for search form, comment form, and comments
     * to output valid HTML5.
@@ -50,51 +53,83 @@ add_action( 'after_setup_theme', 'curso_wordpress_setup' );
  * 
  * @since Curso Wordpress 1.0.0
  */
- function curso_wordpress_register_styles(){
-     $theme_version = wp_get_theme()->get('Version');
+if ( ! function_exists('curso_wordpress_register_styles') ){
+    function curso_wordpress_register_styles(){
+        $theme_version = wp_get_theme()->get('Version');
 
-     //Fonts
-     wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700', array(), $theme_version );
+        //Fonts
+        wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700', array(), $theme_version );
 
-     //Styles
-     wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', array(), '4.4.1' );
-     wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css', array(), '5.10.0' );
-     wp_enqueue_style( 'animate', get_template_directory_uri() . '/inc/animate/animate.min.css', array(), $theme_version );
-     wp_enqueue_style( 'owlcarousel', get_template_directory_uri() . '/inc/owlcarousel/assets/owl.carousel.min.css', array(), $theme_version );
-     wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/inc/flaticon/font/flaticon.css', array(), $theme_version );
-     //wp_enqueue_style( 'tempusdominus', get_template_directory_uri() . '/inc/tempusdominus/css/tempusdominus-bootstrap-4.min.css', array('bootstrap'), $theme_version );
+        //Styles
+        wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', array(), '4.4.1' );
+        wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css', array(), '5.10.0' );
+        wp_enqueue_style( 'animate', get_template_directory_uri() . '/inc/animate/animate.min.css', array(), $theme_version );
+        wp_enqueue_style( 'owlcarousel', get_template_directory_uri() . '/inc/owlcarousel/assets/owl.carousel.min.css', array(), $theme_version );
+        wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/inc/flaticon/font/flaticon.css', array(), $theme_version );
+        //wp_enqueue_style( 'tempusdominus', get_template_directory_uri() . '/inc/tempusdominus/css/tempusdominus-bootstrap-4.min.css', array('bootstrap'), $theme_version );
 
-     //Main theme style
-     wp_enqueue_style( 'theme-style', get_stylesheet_uri() , array('google-fonts', 'bootstrap', 'font-awesome', 'animate', 'owlcarousel', 'flaticon'), $theme_version );
- }
- add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_styles' );
-
+        //Main theme style
+        wp_enqueue_style( 'theme-style', get_stylesheet_uri() , array('google-fonts', 'bootstrap', 'font-awesome', 'animate', 'owlcarousel', 'flaticon'), $theme_version );
+    }
+    add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_styles' );
+}
 /**
  * Register and Enqueue Scripts
  * 
  * @since Curso Wordpress 1.0.0
  */
-function curso_wordpress_register_scripts(){
-    $theme_version = wp_get_theme()->get('Version');
+if ( ! function_exists('curso_wordpress_register_scripts') ){
+    function curso_wordpress_register_scripts(){
+        $theme_version = wp_get_theme()->get('Version');
 
-    //Javascript Libraries
-    wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js', array('jquery'), '4.4.1', true );
-    wp_enqueue_script( 'easing', get_template_directory_uri() . '/inc/easing/easing.min.js', array(), $theme_version, true );
-    wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/inc/owlcarousel/owl.carousel.min.js', array(), $theme_version, true );
-    //wp_enqueue_script( 'moment', get_template_directory_uri() . '/inc/tempusdominus/js/moment.min.js', array(), $theme_version, true );
-    //wp_enqueue_script( 'moment-timezone', get_template_directory_uri() . '/inc/tempusdominus/js/moment-timezone.min.js', array(), $theme_version, true );
-    //wp_enqueue_script( 'tempusdominus', get_template_directory_uri() . '/inc/tempusdominus/js/tempusdominus-bootstrap-4.min.js', array(), $theme_version, true );
+        //Javascript Libraries
+        wp_enqueue_script( 'jquery' );
+        wp_enqueue_script( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js', array('jquery'), '4.4.1', true );
+        wp_enqueue_script( 'easing', get_template_directory_uri() . '/inc/easing/easing.min.js', array(), $theme_version, true );
+        wp_enqueue_script( 'owlcarousel', get_template_directory_uri() . '/inc/owlcarousel/owl.carousel.min.js', array(), $theme_version, true );
+        //wp_enqueue_script( 'moment', get_template_directory_uri() . '/inc/tempusdominus/js/moment.min.js', array(), $theme_version, true );
+        //wp_enqueue_script( 'moment-timezone', get_template_directory_uri() . '/inc/tempusdominus/js/moment-timezone.min.js', array(), $theme_version, true );
+        //wp_enqueue_script( 'tempusdominus', get_template_directory_uri() . '/inc/tempusdominus/js/tempusdominus-bootstrap-4.min.js', array(), $theme_version, true );
 
-    // Concact Javascript File
-    wp_enqueue_script( 'mail-bootstrap-validation', get_template_directory_uri() . '/inc/mail/jqBootstrapValidation.min.js', array('bootstrap'), $theme_version, true );
-    wp_enqueue_script( 'mail-contact', get_template_directory_uri() . '/inc/mail/contact.js', array(), $theme_version, true );
+        // Concact Javascript File
+        wp_enqueue_script( 'mail-bootstrap-validation', get_template_directory_uri() . '/inc/mail/jqBootstrapValidation.min.js', array('bootstrap'), $theme_version, true );
+        wp_enqueue_script( 'mail-contact', get_template_directory_uri() . '/inc/mail/contact.js', array(), $theme_version, true );
 
-    // Main Javascript File
-    wp_enqueue_script( 'theme', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, true );
+        // Main Javascript File
+        wp_enqueue_script( 'theme', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, true );
+    }
+    add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_scripts' );
 }
-add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_scripts' );
 
+/**
+ * Register Navigation Menus
+ * 
+ * @link 
+ * 
+ * @since Curso Wordpress 1.0.0
+ */
+if ( ! function_exists( 'curso_wordpress_navigation_menus' ) ) {
+
+    // Register Navigation Menus
+    function curso_wordpress_navigation_menus() {
+    
+        $locations = array(
+            'menu-principal' => __( 'Menú Principal', 'curso-wordpress' ),
+            'menu-footer' => __( 'Menú Footer', 'curso-wordpress' ),
+        );
+        register_nav_menus( $locations );
+    
+    }
+    add_action( 'init', 'curso_wordpress_navigation_menus' );
+    
+    }
+/**
+ * Register Sidebar
+ * 
+ * @link https://developer.wordpress.org/reference/functions/register_sidebar/
+ * 
+ * @since Curso Wordpress 1.0.0 
+ */
 if ( ! function_exists( 'curso_wordpress_sidebars' ) ) {
 
     // Register Sidebars

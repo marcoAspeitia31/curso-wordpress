@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
+ * Template part for displaying the posts content
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -26,10 +26,28 @@
     <?php the_tags(); ?>
 </div>
 <?php
+/**
+ * This button only will appear when an admin, or editor is logged in
+ */
+edit_post_link(
+    sprintf(
+        /* translators: %s: Name of current post. Only visible to screen readers. */
+        esc_html__( 'Edit %s', 'curso-wordpress' ),
+        '<span class="screen-reader-text">' . get_the_title() . '</span>'
+    ),
+    '',
+    '',
+    0,
+    'btn custom-btn mb-4 w-100'
+);
+
+/**
+ * This hook will allow us to navigate to the next and previous post
+ */
 the_post_navigation(
     array(
-        'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Anterior nota', 'curso-wordpress' ),
-        'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Siguiente nota', 'curso-wordpress' ),
+        'prev_text' => '<i class="fas fa-long-arrow-alt-left mr-3"></i><span class="post-title">%title</span>',
+        'next_text' => '<span class="post-title">%title</span><i class="fas fa-long-arrow-alt-right ml-3"></i>',
     )
 );
 ?>
@@ -46,7 +64,10 @@ the_post_navigation(
         ?>
     </div>
     <div class="single-bio-text">
-        <?php $author_id = get_the_author_meta( 'ID' ); ?>
+        <?php
+            the_time( get_option('date_format') );
+            $author_id = get_the_author_meta( 'ID' );
+        ?>
         <h3><?php echo get_the_author_meta( 'nicename', $author_id ); ?></h3>
         <p><?php echo get_the_author_meta( 'description', $author_id );?></p>
     </div>

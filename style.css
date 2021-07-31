@@ -1393,6 +1393,10 @@ div.blog {
     margin-right: 5px;
 }
 
+.blog .blog-meta a {
+    color: darkslategray;
+}
+
 .blog .blog-meta p:last-child {
     margin: 0;
 }

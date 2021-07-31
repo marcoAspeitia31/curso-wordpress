@@ -35,7 +35,7 @@
                 <!-- Responsive menu -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
                     aria-controls="main-menu" aria-expanded="false"
-                    aria-label="<?php esc_attr_e( 'Toggle navigation', 'devitm' ); ?>">
+                    aria-label="<?php esc_attr_e( 'Toggle navigation', 'curso-wordpress' ); ?>">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <?php

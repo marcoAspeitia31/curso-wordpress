@@ -153,17 +153,13 @@ the_post_navigation(
         endif;
     ?>
 </div>
+
 <div class="comment-form">
-    <?php     
-    $comment_cookies_1 = ' By commenting you accept the';
-    $comment_cookies_2 = ' Privacy Policy';
-    
-    $comment_cancel = 'Cancel Reply';
-    
+    <?php
     //Array
     $comments_args = array(
         //Cancel Reply Text
-        'cancel_reply_link' => __( $comment_cancel ),
+        'cancel_reply_link' => __( 'Cancel Reply', 'curso-wordpress' ),
         // Remove "Text or HTML to be displayed after the set of comment fields".
         'comment_notes_after' => '',
         //Submit Button Classes

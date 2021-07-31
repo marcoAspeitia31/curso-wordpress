@@ -6,8 +6,14 @@
             'status' => 'approve'
         ));
         wp_list_comments(array(
-            'per_page' => 5,
+            'per_page' => 3,
             'reverse_top_level' => true
         ), $comments);
     ?>
+</ul>
+<ul class="pagination justify-content-center">
+    <?php paginate_comments_links( array(
+        'prev_text' => '&laquo;',
+        'next_text' => '&raquo;'
+    ) );?>
 </ul>

@@ -286,7 +286,7 @@ if ( ! function_exists('curso_wordpress_register_styles') ){
         //wp_enqueue_style( 'tempusdominus', get_template_directory_uri() . '/inc/tempusdominus/css/tempusdominus-bootstrap-4.min.css', array('bootstrap'), $theme_version );
 
         //Main theme style
-        wp_enqueue_style( 'theme-style', get_stylesheet_uri() , array('google-fonts', 'bootstrap', 'font-awesome', 'animate', 'owlcarousel', 'flaticon'), $theme_version );
+        wp_enqueue_style( 'theme-style', get_stylesheet_uri() , array('google-fonts', 'bootstrap', 'font-awesome', 'animate', 'flaticon'), $theme_version );
     }
     add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_styles' );
 }
@@ -317,7 +317,7 @@ if ( ! function_exists('curso_wordpress_register_scripts') ){
         wp_enqueue_script( 'mail-contact', get_template_directory_uri() . '/inc/mail/contact.js', array(), $theme_version, true );
 
         // Main Javascript File
-        wp_enqueue_script( 'theme', get_template_directory_uri() . '/assets/js/index.js', array(), $theme_version, true );
+        wp_enqueue_script( 'theme', get_template_directory_uri() . '/assets/js/index.js', array('owlcarousel'), $theme_version, true );
     }
     add_action( 'wp_enqueue_scripts', 'curso_wordpress_register_scripts' );
 }

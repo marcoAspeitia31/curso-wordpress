@@ -54,6 +54,14 @@
         loop: true,
         nav : false
     });
+    // Main carousel
+    $(".testimonial .owl-carousel").owlCarousel({
+        autoplay: true,
+        items: 3,
+        smartSpeed: 300,
+        loop: true,
+        nav : false
+    });
     
     // Modal Video
     $(document).ready(function () {

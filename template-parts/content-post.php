@@ -72,12 +72,13 @@ the_post_navigation(
         <p><?php echo get_the_author_meta( 'description', $author_id );?></p>
     </div>
 </div>
+
 <div class="single-related">
     <h2>Related Post</h2>
-    <div class="owl-carousel related-slider owl-loaded owl-drag">
-        <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-760px, 0px, 0px); transition: all 0.25s ease 0s; width: 3040px;"><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
+    <div class="owl-carousel related-slider">
+        <div class="post-item">
             <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-3.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-1.jpg" />
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -86,9 +87,10 @@ the_post_navigation(
                     <p>In<a href="">Web Design</a></p>
                 </div>
             </div>
-        </div></div><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
+        </div>
+        <div class="post-item">
             <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-4.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-2.jpg" />
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -97,9 +99,10 @@ the_post_navigation(
                     <p>In<a href="">Web Design</a></p>
                 </div>
             </div>
-        </div></div><div class="owl-item active" style="width: 380px;"><div class="post-item">
+        </div>
+        <div class="post-item">
             <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-1.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-3.jpg" />
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -108,9 +111,10 @@ the_post_navigation(
                     <p>In<a href="">Web Design</a></p>
                 </div>
             </div>
-        </div></div><div class="owl-item active" style="width: 380px;"><div class="post-item">
+        </div>
+        <div class="post-item">
             <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-2.jpg">
+                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-4.jpg" />
             </div>
             <div class="post-text">
                 <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
@@ -119,52 +123,10 @@ the_post_navigation(
                     <p>In<a href="">Web Design</a></p>
                 </div>
             </div>
-        </div></div><div class="owl-item" style="width: 380px;"><div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-3.jpg">
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div></div><div class="owl-item" style="width: 380px;"><div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-4.jpg">
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div></div><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-1.jpg">
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div></div><div class="owl-item cloned" style="width: 380px;"><div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/post-2.jpg">
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div></div></div></div><div class="owl-nav"><div class="owl-prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div><div class="owl-next"><i class="fa fa-angle-right" aria-hidden="true"></i></div></div><div class="owl-dots disabled"></div></div>
+        </div>
+    </div>
 </div>
+
 <div class="single-comment">
     <?php
         if(comments_open() || get_comments_number()):

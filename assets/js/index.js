@@ -54,13 +54,21 @@
         loop: true,
         nav : false
     });
-    // Main carousel
+    // Testimonial carousel
     $(".testimonial .owl-carousel").owlCarousel({
         autoplay: true,
         items: 3,
         smartSpeed: 300,
         loop: true,
         nav : false
+    });
+    // Related posts carousel
+    $(".single-related .owl-carousel").owlCarousel({
+        autoplay: true,
+        items: 2,
+        smartSpeed: 300,
+        loop: true,
+        navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
     });
     
     // Modal Video

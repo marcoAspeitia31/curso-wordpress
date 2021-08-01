@@ -57,7 +57,15 @@
     // Testimonial carousel
     $(".testimonial .owl-carousel").owlCarousel({
         autoplay: true,
-        items: 3,
+        items: 1,
+        responsive: {
+            768: {
+                items: 2
+            },
+            992: {
+                items: 3
+            }
+        },
         smartSpeed: 300,
         loop: true,
         nav : false
@@ -65,7 +73,12 @@
     // Related posts carousel
     $(".single-related .owl-carousel").owlCarousel({
         autoplay: true,
-        items: 2,
+        items: 1,
+        responsive: {
+            768: {
+                items: 2
+            }
+        },
         smartSpeed: 300,
         loop: true,
         navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]

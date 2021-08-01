@@ -133,7 +133,7 @@ input#searchsubmit {
 	word-break: normal;
 }
 
-.wp-block-image figure img{
+.wp-block-image img{
     width: 100%;
     height: auto;
 }

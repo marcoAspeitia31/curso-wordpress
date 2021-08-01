@@ -35,7 +35,60 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
         if ( ! empty( $title ) ) {
             echo $before_title . $title . $after_title;
         }
-        echo __( 'Hello, World!', 'curso-wordpress' );
+        $args_query = array(
+            'post_type' => 'post',
+            'posts_per_page' => 5,
+        );
+        $loop_recent_posts = new WP_Query($args_query);
+        echo '<div class="recent-post">';
+        while($loop_recent_posts->have_posts()): $loop_recent_posts->the_post();
+    ?>
+            <div class="post-item">
+                <div class="post-img">
+                    <?php the_post_thumbnail( 'thumbnail', ["class" => "img-fluid"] ); ?>
+                </div>
+                <div class="post-text">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <div class="post-meta">
+                        <p>By
+                        <?php
+                            /**
+                             *  Use of printf to render anchor html tag
+                             * 
+                             *  @link https://www.w3schools.com/php/phptryit.asp?filename=tryphp_func_string_printf
+                             */
+                            printf(
+                                '<a href="%1$s" rel="author">%2$s</a>',
+                                esc_url( get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename') ) ),
+                                get_the_author()
+                            );
+                        ?>
+                        </p>
+                        <p>In
+                        <?php
+                            /**
+                             * Code reference by Codex Wordpress Developer
+                             * 
+                             * @link https://developer.wordpress.org/reference/functions/get_the_category/
+                             */
+                            $categories = get_the_category();
+                            $separator = ' ';
+                            $output = '';
+                            if ( ! empty( $categories ) ) {
+                                foreach( $categories as $category ) {
+                                    $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                                }
+                                echo trim( $output, $separator );
+                            }
+                        ?>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    <?php
+        endwhile;
+        echo '</div>';
+
         echo $after_widget;
     }
  

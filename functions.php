@@ -386,3 +386,8 @@ function curso_wordpress_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'curso_wordpress_custom_excerpt_length', 999 );
+
+/**
+ * In this section add custom php files required
+ */
+require_once dirname(__FILE__) . '/inc/custom-recent-posts-widget.php';

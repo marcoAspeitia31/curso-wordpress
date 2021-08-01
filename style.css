@@ -132,6 +132,11 @@ input#searchsubmit {
 	word-wrap: normal !important;
 	word-break: normal;
 }
+
+.wp-block-image figure img{
+    width: 100%;
+    height: auto;
+}
 .sticky {
 	/* This class is required to pass ThemeCheck. */
 }
@@ -424,8 +429,13 @@ input#searchsubmit {
 .page-header h1 {
     position: relative;
     color: #fbaf32;
-    font-size: 60px;
+    font-size: 1.8rem;
     font-weight: 700;
+}
+@media (min-width: 769px){
+    .page-header h1{
+        font-size: 60px;
+    }
 }
 
 .page-header a,

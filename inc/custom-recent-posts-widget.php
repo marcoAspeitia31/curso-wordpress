@@ -87,6 +87,7 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
             </div>
     <?php
         endwhile;
+        wp_reset_postdata();
         echo '</div>';
 
         echo $after_widget;

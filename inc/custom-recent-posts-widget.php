@@ -80,7 +80,7 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
                             $output = '';
                             if ( ! empty( $categories ) ) {
                                 foreach( $categories as $category ) {
-                                    $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                                    $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'curso-wordpress' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
                                 }
                                 echo trim( $output, $separator );
                             }
@@ -119,11 +119,11 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
         }
         ?>
         <p>
-            <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title:', 'curso-wordpress' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_name( 'number_of_posts' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+            <label for="<?php echo $this->get_field_name( 'number_of_posts' ); ?>"><?php _e( 'Number of posts to show:', 'curso-wordpress' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'number_of_posts' ); ?>" name="<?php echo $this->get_field_name( 'number_of_posts' ); ?>" type="number" value="<?php echo esc_attr( $number_of_posts ); ?>" />
         </p>
     <?php

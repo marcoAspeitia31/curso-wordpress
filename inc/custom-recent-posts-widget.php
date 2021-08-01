@@ -30,14 +30,18 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
     public function widget( $args, $instance ) {
         extract( $args );
         $title = apply_filters( 'widget_title', $instance['title'] );
+        $number_of_posts = apply_filters( 'widget_number_of_posts', $instance['number_of_posts'] );
  
         echo $before_widget;
         if ( ! empty( $title ) ) {
             echo $before_title . $title . $after_title;
         }
+        if ( ! empty($number_of_posts) ){
+            $number_of_posts = $instance['number_of_posts'];
+        }
         $args_query = array(
             'post_type' => 'post',
-            'posts_per_page' => 5,
+            'posts_per_page' => $number_of_posts,
         );
         $loop_recent_posts = new WP_Query($args_query);
         echo '<div class="recent-post">';
@@ -107,11 +111,21 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
         else {
             $title = __( 'New title', 'curso-wordpress' );
         }
+        if ( isset( $instance[ 'number_of_posts' ] ) ) {
+            $number_of_posts = $instance[ 'number_of_posts' ];
+        }
+        else {
+            $number_of_posts = __( 'Number of posts to show', 'curso-wordpress' );
+        }
         ?>
         <p>
             <label for="<?php echo $this->get_field_name( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-         </p>
+        </p>
+        <p>
+            <label for="<?php echo $this->get_field_name( 'number_of_posts' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'number_of_posts' ); ?>" name="<?php echo $this->get_field_name( 'number_of_posts' ); ?>" type="number" value="<?php echo esc_attr( $number_of_posts ); ?>" />
+        </p>
     <?php
     }
  
@@ -128,6 +142,7 @@ class Custom_Recent_Posts_Widget extends WP_Widget {
     public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['number_of_posts'] = ( !empty( $new_instance['number_of_posts'] ) ) ? strip_tags( $new_instance['number_of_posts'] ) : '';
  
         return $instance;
     }

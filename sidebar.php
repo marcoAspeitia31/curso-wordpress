@@ -6,13 +6,8 @@
  *
  * @since Curso Wordpress 1.0.0
  */
-?>
 
-<aside class="sidebar">
-    <?php
-        if(!is_active_sidebar('single-sidebar')){
-            return;
-        }
-        dynamic_sidebar( 'single-sidebar' );
-    ?>
-</aside>
+if(!is_active_sidebar('single-sidebar')){
+    return;
+}
+dynamic_sidebar( 'single-sidebar' );

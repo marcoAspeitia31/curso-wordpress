@@ -362,6 +362,8 @@ if ( ! function_exists( 'curso_wordpress_sidebars' ) ) {
             'name'          => __( 'Sidebar Lateral Posts', 'curso-wordpress' ),
             'before_title'  => '<h2 class="widget-title">',
             'after_title'   => '</h2>',
+            'before_sidebar' => '<aside class="sidebar">',
+            'after_sidebar' => '</aside>',
             'before_widget' => '<div class="sidebar-widget">',
             'after_widget'  => '</div>',
         );

@@ -279,7 +279,7 @@ if ( ! function_exists('curso_wordpress_register_styles') ){
 
         //Styles
         wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '4.4.1' );
-        wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css', array(), '5.10.0' );
+        wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/inc/fontawesome/css/all.min.css', array(), '5.15.3' );
         wp_enqueue_style( 'animate', get_template_directory_uri() . '/inc/animate/animate.min.css', array(), $theme_version );
         wp_enqueue_style( 'owlcarousel', get_template_directory_uri() . '/inc/owlcarousel/assets/owl.carousel.min.css', array(), $theme_version );
         wp_enqueue_style( 'flaticon', get_template_directory_uri() . '/inc/flaticon/font/flaticon.css', array(), $theme_version );

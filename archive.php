@@ -17,14 +17,7 @@ get_template_part( 'template-parts/header/header', 'search' );
         <h2>
             <?php 
                 echo sprintf( __( '%s Posts de ', 'curso-wordpress' ), $wp_query->found_posts );
-
-                if( get_queried_object(  )->taxonomy == 'post_tag'){
-                    echo 'tag: ' . get_queried_object()->name;
-                }elseif( get_queried_object(  )->taxonomy == 'category' ){
-                    echo 'category: ' . get_queried_object()->name;
-                }else{
-                    echo 'author: ' . get_queried_object()->user_nicename;
-                }
+                the_archive_title();
             ?>
         </h2>
     </div>

@@ -1,53 +1,42 @@
+<?php $args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 4,
+    'category__in' => wp_get_post_categories( get_the_ID() ),
+    'orderby' => 'date'
+);
+
+$related_posts = new WP_Query($args);
+
+if ( $related_posts->have_posts() ):
+?>
+
 <div class="single-related">
     <h2>Related Post</h2>
     <div class="owl-carousel related-slider">
+    <?php while($related_posts->have_posts(  )): $related_posts->the_post(  );?>
         <div class="post-item">
             <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-1.jpg" />
+                <?php the_post_thumbnail( 'thumbnail', array('class' => 'img-fluid') ); ?>
             </div>
             <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
+                    <p>By
+                    <?php
+                        printf(
+                            '<a href="%1$s" rel="author">%2$s</a>',
+                            esc_url( get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename') ) ),
+                            get_the_author()
+                        );
+                    ?>
+                    </p>
+                    <p>In <?php the_category(', ');?></p>
                 </div>
             </div>
         </div>
-        <div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-2.jpg" />
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-3.jpg" />
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="post-item">
-            <div class="post-img">
-                <img src="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/post-4.jpg" />
-            </div>
-            <div class="post-text">
-                <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                <div class="post-meta">
-                    <p>By<a href="">Admin</a></p>
-                    <p>In<a href="">Web Design</a></p>
-                </div>
-            </div>
-        </div>
+    <?php endwhile; ?>
     </div>
 </div>
+
+<?php
+endif;

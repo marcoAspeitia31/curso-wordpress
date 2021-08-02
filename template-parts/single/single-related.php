@@ -1,6 +1,7 @@
 <?php $args = array(
     'post_type' => 'post',
     'posts_per_page' => 4,
+    'post__not_in' => array(get_the_ID(  )),
     'category__in' => wp_get_post_categories( get_the_ID() ),
     'orderby' => 'date'
 );
@@ -12,7 +13,7 @@ if ( $related_posts->have_posts() ):
 
 <div class="single-related">
     <h2>Related Post</h2>
-    <div class="owl-carousel related-slider">
+    <div class="<?php echo count($related_posts->posts) == 1 ? '' : 'owl-carousel';?> related-slider">
     <?php while($related_posts->have_posts(  )): $related_posts->the_post(  );?>
         <div class="post-item">
             <div class="post-img">
